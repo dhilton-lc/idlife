@@ -6,6 +6,11 @@ IdlifeCom::Application.routes.draw do
   root 'home#index'
 
   get 'faq' => 'home#faq'
+  get 'terms' => 'home#terms'
+  get 'privacy' => 'home#privacy'
+  get 'about' => 'home#about'
+  get 'contact' => 'home#contact'
+  get 'comp_plan' => 'home#comp_plan'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
