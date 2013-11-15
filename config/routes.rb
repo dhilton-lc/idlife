@@ -12,6 +12,15 @@ IdlifeCom::Application.routes.draw do
   get 'contact' => 'home#contact'
   get 'comp_plan' => 'home#comp_plan'
 
+  # FIXME: Resources
+  get "events" => "events#index"
+
+  # FIXME: Resources
+  get "products" => "products#index"
+  get "products/category"
+  get "products/show"
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
