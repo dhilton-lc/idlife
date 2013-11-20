@@ -13,6 +13,7 @@
  */
 
 @import "bootstrap";
+@import "compass";
 @import "bourbon";
 @import "partials/variables";
 @import "partials/mixins";
@@ -27,10 +28,12 @@ ul{
     margin: 0;
     padding: 0;
     &.checkout-links{
-        @extend .pull-right;
+        // @extend .pull-right;
+        text-align: right;
         li{
             margin-right:5px;
             position: relative;
+            @include inline-block;
             &.cart-count{
                 margin-right: 10px;
                 @include inline-block;
@@ -38,7 +41,9 @@ ul{
             &:last-of-type{
                 margin-right: 0;
             }
-
+            a{
+                color:$white;
+            }
             span{
                 position: absolute;
                 left:0;right:0;bottom:0;top:0;
@@ -50,16 +55,31 @@ ul{
         }
     }
     &.login-links{
-        @extend .pull-right;
+        // @extend .pull-right;
+        text-align: right;
         li{
             margin-right:10px;
+            @include inline-block;
             &:last-of-type{
                 margin-right: 0;
             }
+            a{
+                color:$white;
+            }
+        }
+        &:after{
+            content: ' ';
         }
     }
 }
-
+.no-gutter{
+    // [class*="-2"]{
+    //     padding-left: 0;
+    // }
+    // [class*="-3"]{
+    //     padding-left: 0;
+    // }
+}
 header{
     .status-bar{
         background: #414042;
@@ -78,8 +98,7 @@ header{
                 @extend .pull-left;   
             }
             &.checkout-links{
-                margin-left: 20px;
-               
+                margin-left: 20px;               
             }
 
         }
@@ -118,4 +137,40 @@ header{
             }
         }
     }    
+}
+
+footer{
+    @include box-shadow(inset 0 20px 20px -20px rgba(0,0,0,.8));
+    background: #004A80;
+    height:500px;
+    @include radial-gradient(#0B80BB, #004A80);
+    padding:50px 0;
+    .row{
+        margin-bottom:20px;
+        &.last{
+            margin-top: 100px;
+        }
+    }
+
+    ul{
+        &.login-links{
+            margin-bottom: 20px;
+        }
+        li{
+            color:$white;
+            &:first-of-type{
+                margin-bottom: 20px;
+            }
+            a{
+                color:$white;
+            }
+        }
+
+        &.terms{
+            li{
+                @include inline-block;
+                margin-right: 10px;
+            }
+        }
+    }
 }

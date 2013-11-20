@@ -1,4 +1,87 @@
-.container
-  .row
-    .span12
-      IDLife FOOTER
+%footer
+  .container
+    .row
+      .col-md-6
+        =image_tag( 'logo-footer.png', :class=>"pull-left" )
+      .col-md-6
+        %ul{  :class => 'login-links' }
+          %li
+            %a{ :href => '' }="Customer Login"
+          %li
+            %a{ :href => '' }="ID Reps Login"
+        %ul{ :class=> 'checkout-links' }
+          %li
+            %a{ :href => '' }
+              =image_tag( 'basket-icon.png')
+
+          %li{ :class => 'cart-count' }
+            %a{ :href => '' }
+              %span=1 #/CHANGE ME
+              =image_tag( 'cart-count-round.png')
+
+          %li
+            %a{ :href => '' }
+              =image_tag( 'credit-card-icon.png')
+    .row
+      .col-md-3
+        %ul
+          %li
+            %a{:href => '' }="Individually Designed Products"
+          %li
+            %a{:href => '' }="Flagship Products"
+          %li
+            %a{:href => '' }="ID Nutrition Program"
+          %li
+            %a{:href => '' }="Weight Loss Program"
+          %li
+            %a{:href => '' }="Energy Program"
+
+      .col-md-2
+        %ul
+          %li
+            %a{:href => '' }="ID Opportunity"
+          %li
+            %a{:href => '' }="Comp Plan"
+          %li
+            %a{:href => '' }="Sign Up"
+
+      .col-md-2
+        %ul
+          %li
+            %a{:href => '' }="The individuals"
+          %li
+            %a{:href => '' }="Meet the Team"
+
+      .col-md-2
+        %ul
+          %li
+            %a{:href => '' }="Questions"
+      
+      .col-md-2
+        %ul
+          %li
+            %a{:href => '' }="Connect"
+          %li
+            %a{:href => '' }="Cotact Us"
+          %li
+            %a{:href => '' }="Blog"
+          %li
+            %a{:href => '' }="Announcements"
+          %li
+            %a{:href => '' }="Facebook"
+          %li
+            %a{:href => '' }="Twitter"            
+    .row.last
+      .col-md-12
+        %ul.terms
+          %li="Copyright 2013 ID Life LLC. All rights reserved."
+          %li
+            %a{ :href => ''}="Privacy Policy"
+          %li
+            %a{ :href => ''}="Terms of Use"
+
+
+
+
+			
+
