@@ -1,1 +1,39 @@
-%h1 IDLife Home
+%section#product-slider
+  .row
+    .container
+      #content
+        %span{ :class => 'prevControl' }
+          =image_tag( 'prev-control.png')
+        %span{ :class => 'nextControl' }
+          =image_tag( 'next-control.png')
+        %div{ :class => 'cycle-slideshow', :id => 'slider', 
+          :data => {'cycle-slides' => '> .product', 
+          'cycle-fx' => 'scrollHorz', 
+          'cycle-timeout' => 0, 
+          'cycle-prev' => '.prevControl', 
+          'cycle-next' => '.nextControl' } }
+          
+          %article.product
+
+%section.container.inner
+  .row
+    %article.col-md-4
+      =image_tag( 'home/runner.jpg')
+      %h3="Lorem ipsum dolor sit amet"
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.
+      %a{ :href => ''}="learn more"
+
+    %article.col-md-4
+      =image_tag( 'home/products.jpg')
+      %h3="Lorem ipsum dolor sit amet"
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.
+      %a{ :href => ''}="learn more"
+
+    %article.col-md-4
+      =image_tag( 'home/id-life-gauge.jpg')
+      %h3="Lorem ipsum dolor sit amet"
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.  
+      %a{ :href => ''}="learn more"

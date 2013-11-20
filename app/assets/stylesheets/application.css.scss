@@ -28,7 +28,6 @@ ul{
     margin: 0;
     padding: 0;
     &.checkout-links{
-        // @extend .pull-right;
         text-align: right;
         li{
             margin-right:5px;
@@ -72,6 +71,7 @@ ul{
         }
     }
 }
+
 .no-gutter{
     // [class*="-2"]{
     //     padding-left: 0;
@@ -80,6 +80,7 @@ ul{
     //     padding-left: 0;
     // }
 }
+
 header{
     .status-bar{
         background: #414042;
@@ -106,7 +107,13 @@ header{
 
     nav{
         @include linear-gradient(#cbccce , #8a8c8f);
-        &.navbar{border-radius:0; }
+        &.navbar{
+            border-radius:0; 
+            margin: 0;
+            padding: 0;
+            border:none;
+        }
+        
         h1#logo{
             margin: 0;
             padding: 0;
@@ -141,9 +148,8 @@ header{
 
 footer{
     @include box-shadow(inset 0 20px 20px -20px rgba(0,0,0,.8));
-    background: #004A80;
-    height:500px;
     @include radial-gradient(#0B80BB, #004A80);
+    height:500px;
     padding:50px 0;
     .row{
         margin-bottom:20px;

@@ -7,6 +7,5 @@
     = csrf_meta_tags
   %body{ :class => "#{controller.controller_name}" }
     = render :partial => 'layouts/nav'
-    .container#content
-      = yield
+    = yield
     = render :partial => 'layouts/footer'
