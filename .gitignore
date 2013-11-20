@@ -18,3 +18,7 @@
 /.env
 /.*.env
 
+assets/
+*.sublime-project
+*.sublime-workspace
+Guardfile

@@ -1,4 +1,49 @@
-.container
-  .row
-    .span12
-      IDLife NAV
+%header
+  .status-bar
+    .container
+      %ul{ :id => 'social' }
+        %li
+          %a{ :href => '#' }
+            =image_tag( 'fb-icon.png')
+        %li
+          %a{ :href => '#' } 
+            =image_tag( 'twitter-icon.png')
+
+      %ul{ :class=> 'checkout-links' }
+        %li
+          %a{ :href => '' }
+            =image_tag( 'basket-icon.png')
+        %li{ :class => 'cart-count' }
+          %a{ :href => '' }
+            %span=1 #/CHANGE ME
+            =image_tag( 'cart-count-round.png')
+        %li
+          %a{ :href => '' }
+            =image_tag( 'credit-card-icon.png')
+      
+      %ul{  :class => 'login-links' }
+        %li
+          %a{ :href => '' }="Customer Login"
+        %li
+          %a{ :href => '' }="ID Reps Login"
+
+  %nav{ :class => 'navbar navbar-default', :role => 'navigation' }
+    .container
+      %h1{ :id => "logo" }
+        %a{ :href => '', }
+          =image_tag( 'logo.png')
+
+      %ul
+        %li{:class => 'active' }
+          %a{ :href => '' }= "Home"
+        %li
+          %a{ :href => '', }= "ID Life Products"
+        %li
+          %a{ :href => '', }= "The Opportunity"
+        %li
+          %a{ :href => '', }= "The Team"
+        %li
+          %a{ :href => '', }= "Questions"
+        %li
+          %a{ :href => '', }= "Events"
+

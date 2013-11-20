@@ -13,3 +13,109 @@
  */
 
 @import "bootstrap";
+@import "bourbon";
+@import "partials/variables";
+@import "partials/mixins";
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+
+body{
+    font-family: $font-family;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    &.checkout-links{
+        @extend .pull-right;
+        li{
+            margin-right:5px;
+            position: relative;
+            &.cart-count{
+                margin-right: 10px;
+                @include inline-block;
+            }
+            &:last-of-type{
+                margin-right: 0;
+            }
+
+            span{
+                position: absolute;
+                left:0;right:0;bottom:0;top:0;
+                text-align: center;
+                color:#231F20;
+                height:100%;
+                width:100%;
+            }
+        }
+    }
+    &.login-links{
+        @extend .pull-right;
+        li{
+            margin-right:10px;
+            &:last-of-type{
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+header{
+    .status-bar{
+        background: #414042;
+        width:100%;
+        height: 32px;
+        ul{
+            line-height:30px;
+            li{
+                @include inline-block;
+                a{
+                    @include font-size(14);
+                    color: $white;
+                }
+            }
+            &#social{
+                @extend .pull-left;   
+            }
+            &.checkout-links{
+                margin-left: 20px;
+               
+            }
+
+        }
+    }
+
+    nav{
+        @include linear-gradient(#cbccce , #8a8c8f);
+        &.navbar{border-radius:0; }
+        h1#logo{
+            margin: 0;
+            padding: 0;
+            line-height: 70px;
+            @extend .pull-left;
+        }
+        ul{
+            @extend .pull-right;
+            line-height: 70px;
+            li{
+                @include inline-block;
+                margin-right: 20px;
+                line-height: 25px;
+                &:last-of-type{
+                    margin-right: 0;
+                }
+                a{
+                    color:#231F20;
+                }
+
+                &.active{
+                    border-bottom: 5px solid $white;
+                    a{
+                        
+                    }
+                }
+
+            }
+        }
+    }    
+}

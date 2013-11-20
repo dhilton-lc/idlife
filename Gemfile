@@ -7,6 +7,15 @@ gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'simple_form'
 
+#sass mixin library
+gem 'bourbon'
+
+
+group :development do
+	gem 'guard-livereload', require: false
+	gem 'rack-livereload'
+end
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
