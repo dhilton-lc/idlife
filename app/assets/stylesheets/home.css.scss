@@ -8,29 +8,17 @@
 body.home { // Scope using controller name
 
 	#product-slider{
-		@include radial-gradient(circle at 50% 50%, #BC7CCC 0%, #8E2B7D 23.98%, #0B0204 60%);
-		min-height:600px;
+		@include radial-gradient(circle at 50% 50%, #BC7CCC 0%, #8E2B7D 23.98%, #0B0204 50%);
+		min-height:700px;
 		height:100%;
 		width:100%;
 		.row{
 			margin-left: 0;
 			margin-right: 0;
-		}
-		#content{
-			position: relative;
-			span{
-				position: absolute;
-				top:50%;
-				&.nextControl{
-					right:0;
-				}
-				
-			}				
-		}
-		
+		}		
 	}
 
-	.inner{
+	#content{
 		padding: 50px 0;
 		article{
 			text-align: center;
@@ -42,7 +30,6 @@ body.home { // Scope using controller name
 				font-family: $font-family;
 				font-weight: 400;
 			}
-
 		}
 	}
 
