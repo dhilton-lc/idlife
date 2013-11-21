@@ -1,0 +1,10 @@
+@mixin line-height($heightValue: 12 ){
+  	font-size: $heightValue * 1px;
+  	font-size: $heightValue * 0.1rem;
+    
+}
+
+@mixin font-size($sizeValue: 12 ){
+  	font-size: $sizeValue * 1px;
+  	font-size: $sizeValue * 0.1rem;
+}
