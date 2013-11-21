@@ -29,20 +29,50 @@
           %p
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.
       .row.content
-        .col-md-12.slider-thumbs
-          %p="Slider here"
-
-        .col-md-4.slider-inner
-          =image_tag('about/team-member-placeholder.jpg', :class => 'img-responsive')
-          %br
-          =image_tag('about/video-placeholder.jpg', :class => 'img-responsive');
-        .col-md-8.slider-inner
-          %h2="Logan Stout"
-          %h3="CEO and Founder"
-          %p
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.
-          %p
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.
+        .col-md-12#slider-thumbs
+          %span.prev-control.slider-control
+            =image_tag( 'about/prev-control.png')
+          %span.next-control.slider-control
+            =image_tag( 'about/next-control.png')
+          .cycle-slideshow#thumbs{ :data => { "cycle-timeout" => 0, 
+            "cycle-prev" => ".prev-control", 
+            "cycle-next" => ".next-control",
+            "cycle-fx" => "carousel",
+            "cycle-carousel-fluid" => "true",
+            "allow-wrap" => "false" } }
+            =image_tag('about/thumb-placeholder.jpg', :class => 'img-responsive')
+            =image_tag('about/thumb-placeholder.jpg', :class => 'img-responsive')
+            =image_tag('about/thumb-placeholder.jpg', :class => 'img-responsive')
+            =image_tag('about/thumb-placeholder.jpg', :class => 'img-responsive')
+            =image_tag('about/thumb-placeholder.jpg', :class => 'img-responsive')
+            =image_tag('about/thumb-placeholder.jpg', :class => 'img-responsive')
+            =image_tag('about/thumb-placeholder.jpg', :class => 'img-responsive')
+      .row.content
+        .cycle-slideshow{ :data => { "cycle-timeout" => 0, "cycle-slides" => "> div", "cycle-fx" => "scrollHoriz"} }
+          .col-md-12
+            .col-md-4.slider-inner
+              =image_tag('about/team-member-placeholder.jpg', :class => 'img-responsive')
+              %br
+              =image_tag('about/video-placeholder.jpg', :class => 'img-responsive');
+            .col-md-8.slider-inner
+              %h2="Logan Stout"
+              %h3="CEO and Founder"
+              %p
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.
+              %p
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.
+          .col-md-12
+            .col-md-4.slider-inner
+              =image_tag('about/team-member-placeholder.jpg', :class => 'img-responsive')
+              %br
+              =image_tag('about/video-placeholder.jpg', :class => 'img-responsive');
+            .col-md-8.slider-inner
+              %h2="Some Other Dude"
+              %h3="CEO and Founder"
+              %p
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.
+              %p
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.
 
      
 

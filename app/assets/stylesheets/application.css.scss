@@ -22,6 +22,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
 
 body{
+    color: #6D6E71;
     // home controller
     &.home{
         #product-slider{
@@ -163,6 +164,37 @@ body{
                                 text-align: center;     
                             }
                             text-align: left;
+                            #slider-thumbs{
+                                position: relative;
+                                margin: 20px 0;
+                                padding: 20px 0;
+                                border-bottom: 1px solid #808082;
+                                .cycle-slideshow{
+                                    margin: 0 auto;
+                                    width:90%;    
+                                    .cycle-slide{
+                                        @include inline-block;
+                                        width: 158px;
+                                        height: 158px;
+                                        margin-right: 10px;
+                                    }
+                                }
+                                .slider-control{
+                                    position: absolute;
+                                    top:40%;
+                                    @include inline-block;
+                                  
+                                    cursor:pointer;
+                                    &.next-control{
+                                        right: 0;
+                                        margin-left: 20px;
+                                    }
+                                    &.prev-control{
+                                        margin-right: 20px;
+                                        left:0;
+                                    }
+                                }
+                            }
                         }
                         //comp plan
                         &.comp-plan-content{
@@ -196,15 +228,9 @@ body{
                             .content{
                                 margin: 50px 0;
                             }
-                            &#transform{
-                               
-                            }
-                            &#earn{
-                             
-                            }
-                            &#process{
-                                
-                            }
+                            &#transform{ }
+                            &#earn{}
+                            &#process{}
                         }
                         // global header stuff
                         header{
@@ -294,6 +320,7 @@ ul{
                 color:#231F20;
                 height:100%;
                 width:100%;
+                @include font-size(11);
             }
         }
     }

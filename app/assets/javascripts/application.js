@@ -13,10 +13,21 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.cycle2
+//= require jquery.cycle2.carousel
 //= require_tree .
 //= require bootstrap
 
 $(document).ready(function(){
+	var slideshows = $('.cycle-slideshow').on('cycle-next cycle-prev', function(e, opts) {
+	    // advance the other slideshow
+	    slideshows.not(this).cycle('goto', opts.currSlide);
+	});
 
+	$('#thumbs .cycle-slide').click(function(){
+	    var index = $('#thumbs').data('cycle.API').getSlideIndex(this);
+	    console.log(index);
+	    slideshows.cycle('goto', index);
+	});
 
 });
