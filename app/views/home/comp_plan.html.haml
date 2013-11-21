@@ -1,1 +1,135 @@
-%h1 Comp Plan
+%section.hero#comp-plan
+  .container
+    .row
+      .col-md-12
+        %h1="An Individually Designed Comp Plan"
+        %p="Select one of the icons below to learn more about how IDLife can change your life:"
+
+%section.container.inner
+  
+  %header.row.tab-header
+    %ul
+      %li.active
+        %a{ :href => '#transform', :data => { :toggle => "tab" } }
+          ="Transform"
+          %span="your entire life"
+      %li
+        %a{ :href => '#earn', :data => { :toggle => "tab" } }
+          ="Earn"
+          %span="a little extra each month"
+      %li
+        %a{ :href => '#process', :data => { :toggle => "tab" } }
+          ="A Process"
+          %span="for success"
+  
+  %section.tab-content
+    %article.tab-pane.fade.in.active.comp-plan-content#transform
+      %header.row
+        .col-md-12
+          =image_tag( 'comp-plan/video-placeholder.jpg')
+          %h2="Completely change your entire life."
+          %h3="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      .row.content
+        .col-md-12
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.
+          %a{ :href => '#', :class=> 'download'}
+            =image_tag('pdf-icon-lg.png')
+            %span="> Download the Comp Plan (PDF)"
+          .quote
+            .col-md-8
+              %blockquote
+                %h3="&quot;It's amazing how this system works."
+                %h2="It’s built around what I already do."
+                %h3="I just have to do what I normally do each day...&quot;"
+                %h4="The power of individuals helping individuals ."
+            .col-md-4
+              %blockquote
+                =image_tag( 'quote-icon-lg.png')
+      .row.content
+        .col-md-4
+          =image_tag( 'comp-plan/image-placeholder.jpg', :class => 'img-responsive' )
+        .col-md-8.left-align
+          %h2="Lorem ipsum dolor sit amet"
+          %h3="Lorem ipsum dolor sit ametorem ipsum dolor sit amet"
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.
+      .row.content
+        .col-md-8.left-align
+          %h2="Lorem ipsum dolor sit amet"
+          %h3="Lorem ipsum dolor sit ametorem ipsum dolor sit amet"
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.
+        .col-md-4
+          =image_tag( 'comp-plan/image-placeholder.jpg', :class => 'img-responsive' )
+
+    %article.tab-pane.fade.comp-plan-content#earn
+      %header.row
+        .col-md-12
+          =image_tag( 'comp-plan/video-placeholder.jpg')
+          %h2="Completely change your entire life."
+          %h3="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      .row.content
+        .col-md-12
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.
+          %a{ :href => '#', :class=> 'download'}
+            =image_tag('pdf-icon-lg.png')
+            %span="> Download the Comp Plan (PDF)"
+          .quote
+            .col-md-8
+              %blockquote
+                %h3="&quot;People want to lead healthy lives."
+                %h2="IDLife makes it easier to do that "
+                %h3="and telling people how we make it easy, is...easy.&quot;"
+                %h4="A business with the flexibility that you need"
+            .col-md-4
+              %blockquote
+                =image_tag( 'quote-icon-lg.png')
+      .row.content
+        .col-md-4
+          =image_tag( 'comp-plan/image-placeholder.jpg', :class => 'img-responsive' )
+        .col-md-8.left-align
+          %h2="Lorem ipsum dolor sit amet"
+          %h3="Lorem ipsum dolor sit ametorem ipsum dolor sit amet"
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.
+      .row.content
+        .col-md-8.left-align
+          %h2="Lorem ipsum dolor sit amet"
+          %h3="Lorem ipsum dolor sit ametorem ipsum dolor sit amet"
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.
+        .col-md-4
+          =image_tag( 'comp-plan/image-placeholder.jpg', :class => 'img-responsive' )
+    %article.tab-pane.fade.comp-plan-content#process
+      %header.row
+        .col-md-12
+          %h2="So much more than just \"Goals\""
+          %h3="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.
+      .row.content
+        .col-md-4
+          =image_tag( 'comp-plan/image-placeholder.jpg', :class => 'img-responsive' )
+        .col-md-8.left-align
+          %h2="Lorem ipsum dolor sit amet"
+          %h3="Lorem ipsum dolor sit ametorem ipsum dolor sit amet"
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.
+      .row.content
+        .col-md-8.left-align
+          %h2="Lorem ipsum dolor sit amet"
+          %h3="Lorem ipsum dolor sit ametorem ipsum dolor sit amet"
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.
+        .col-md-4
+          =image_tag( 'comp-plan/image-placeholder.jpg', :class => 'img-responsive' )
+      .row.content
+        .col-md-4
+          =image_tag( 'comp-plan/image-placeholder.jpg', :class => 'img-responsive' )
+        .col-md-8.left-align
+          %h2="Lorem ipsum dolor sit amet"
+          %h3="Lorem ipsum dolor sit ametorem ipsum dolor sit amet"
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.

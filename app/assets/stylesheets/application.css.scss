@@ -12,18 +12,16 @@
  */
 
 /* Using @import instead of require so bootstrap mixins can be used in all sass files */
-
+@import "partials/variables";
+@import "partials/mixins";
 @import "bootstrap";
 @import "compass";
 @import "compass/css3/border-radius";
 @import "bourbon";
-@import "partials/variables";
-@import "partials/mixins";
+
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
 
 body{
-    font-family: $font-family;
-    
     // home controller
     &.home{
         #product-slider{
@@ -110,12 +108,13 @@ body{
                             @include inline-block;
                             color:#909295;
                             text-align: center;
-                            padding:5px 10px;
+                            padding:5px 30px;
                             @media(max-width:767px){
                                 @include font-size(22);
                             }
                             @media(max-width:480px){
                                 @include font-size(15);
+                                padding: 5px;
                             }
                             &:hover{
                                 background: #0F95D2;
@@ -139,6 +138,21 @@ body{
             section{
                 &.tab-content{
                     .tab-pane{
+                        h2{
+                            color:#6D6E71;
+                            font-weight: 300;
+                        }
+                        h3{
+                            color:#0F95D2;
+                            font-weight: 300;
+                            margin: 20px 0;
+                        }
+                        h4{
+                            @include font-size(18);
+                            font-weight: 700;
+                            color:#27AAE1;
+                        }
+
                         //faq page
                         &.faq-content{
                             text-align: left;
@@ -150,26 +164,63 @@ body{
                             }
                             text-align: left;
                         }
+                        //comp plan
+                        &.comp-plan-content{
+                            padding: 40px 0;
+                            text-align: center;
+                            a.download{
+                                font-weight: 700;
+                                margin: 15px 0;
+                                @include inline-block;
+                                text-decoration: none;
+                                span{
+                                    margin-top: 10px;
+                                    display: block;
+                                }
+                            }
+                            header{
+                                margin: 10px 0 20px;
+                            }
+                            .quote{
+                                background: #EEEFEF;
+                                overflow: hidden;
+                                text-align: left;
+                                margin: 40px 0;
+                                h2,h3{
+                                    margin: 10px 0;
+                                }
+                                h2{
+                                    font-weight: 700;
+                                }
+                            }
+                            .content{
+                                margin: 50px 0;
+                            }
+                            &#transform{
+                               
+                            }
+                            &#earn{
+                             
+                            }
+                            &#process{
+                                
+                            }
+                        }
                         // global header stuff
                         header{
-                            h2{
-                                color:#6D6E71;
-                                font-weight: 300;
-                            }
-                            h3{
-                                color:#0F95D2;
-                                font-weight: 300;
-                                margin: 20px 0;
-                            }
+                           
                         }
                         // global content
                         .content{
-                            h3{
-                                color:#0F95D2;
-                                font-weight: 300;
-                                margin: 20px 0;
+                            margin: 20px 0;
+                            .left-align{
+                                text-align: left;
+                            }
+                            .center{
+                                text-align: center;
                             }
                         }
+
                     }               
                 }
             }
@@ -183,6 +234,7 @@ body{
             &#faq{ background: image-url('faq/hero-bg.jpg') center center no-repeat; }
             &#about{ background: image-url('about/hero-bg.jpg') center center no-repeat; }
             &#contact{ background: image-url('contact/hero-bg.jpg') center center no-repeat; }
+            &#comp-plan{ background: image-url('comp-plan/hero-bg.jpg') center center no-repeat; }
             h1{
                 color:$white;
                 font-weight: 300;
@@ -391,9 +443,6 @@ header#site-header{
 
                 &.active{
                     border-bottom: 5px solid $white;
-                    a{
-                        
-                    }
                 }
                 &#magic-line {
                     position: absolute;
