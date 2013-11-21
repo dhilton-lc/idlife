@@ -1,1 +1,61 @@
-%h1 Contact Us
+%section.hero#contact
+  .container
+    .row
+      .col-md-12
+        %h1="Contact Us"
+%section.container.inner.left-align
+  .row
+    %article.col-md-5.contact
+      %h3="Partner Support Line"
+      %p="888-888-8888"
+      %h3="Customer Support Line"
+      %p="972-987-4430"
+      %h3="Pre-recorded Information"
+      %p="888-888-8888"
+      %hr
+      %h3="Mailing Address"
+      %p="ID Life"
+      %p="15222 King Road Ste. 701"
+      %p="Frisco, TX 75034"
+      %hr
+      %h3="The IDLife Blog"
+      %hr
+      %h3="Social Networks"
+      %ul.social
+        %li
+          %a{ :href=> '#' }=image_tag('fb-icon-md.png')
+        %li
+          %a{ :href=> '#' }=image_tag('twitter-icon-md.png')
+        %li
+          %a{ :href=> '#' }=image_tag('google-plus-icon-md.png')
+        %li
+          %a{ :href=> '#' }=image_tag('linkedin-icon-md.png')
+
+    %article.col-md-7.contact
+      %h3="Contact Form"
+      %form.form-horizontal
+        .form-group
+          %label{ :class => 'col-md-3 col-sm-3 col-xs-4 control-label', :for => 'first-name' }="First Name*"
+          %input{ :class => 'col-md-7 col-sm-5 col-xs-7 input-lg', :name => 'first-name', :type => 'text'}
+        .form-group
+          %label{ :class => 'col-md-3 col-sm-3 col-xs-4 control-label', :for => 'last-name' }="Last Name*"
+          %input{ :class => 'col-md-7 col-sm-5 col-xs-7 input-lg', :name => 'last-name', :type => 'text'}
+        .form-group
+          %label{ :class => 'col-md-3 col-sm-3 col-xs-4 control-label', :for => 'email' }="Email*"
+          %input{ :class => 'col-md-7 col-sm-5 col-xs-7 input-lg', :name => 'email', :type => 'text'}
+        .form-group
+          %label{ :class => 'col-md-3 col-sm-3 col-xs-4', :for => 'phone' }="Phone*"
+          %input{ :class => 'col-md-7 col-sm-5 col-xs-7 input-lg', :name => 'phone', :type => 'text'}
+        .form-group
+          %label{ :class => 'col-md-3 col-sm-3 col-xs-4', :for => 'partner-id' }="Partner ID"
+          %input{ :class => 'col-md-7 col-sm-5 col-xs-7 input-lg', :name => 'partner-id', :type => 'text'}
+        .form-group
+          %label{ :class => 'col-md-3 col-sm-3 col-xs-4', :for => 'topic' }="Topic*"
+          %select{ :class => 'col-md-7 col-sm-5 col-xs-7 input-lg', :name => 'topic'}
+        .form-group
+          %label{ :class => 'col-md-3 col-sm-3 col-xs-4', :for => 'message' }="Message"
+          %textarea{ :class => 'col-md-7 col-sm-5 col-xs-7 input-lg', :name => 'message',:rows => 10}
+        .form-inputs.row
+          %input{ :type => 'submit', :class => 'btn btn-primary col-md-offset-3 col-xs-offset-3' }
+          
+

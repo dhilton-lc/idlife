@@ -8,139 +8,178 @@
 
 body.home { // Scope using controller name
 
-	#product-slider{
-		@include radial-gradient(circle at 50% 50%, #BC7CCC 0%, #8E2B7D 23.98%, #0B0204 50%);
-		min-height:700px;
-		height:100%;
-		width:100%;
-		.row{
-			margin-left: 0;
-			margin-right: 0;
-		}		
-	}
+	// #product-slider{
+	// 	@include radial-gradient(circle at 50% 50%, #BC7CCC 0%, #8E2B7D 23.98%, #0B0204 50%);
+	// 	min-height:700px;
+	// 	height:100%;
+	// 	width:100%;
+	// 	.row{
+	// 		margin-left: 0;
+	// 		margin-right: 0;
+	// 	}		
+	// }
 
-	.inner{
-		padding: 50px 0;
-		.row{
-			margin: 0; //booto
-		}
-		article{
-			text-align: center;
-			h3{
-				font-family: $font-family;
-				font-weight: 300;
-			}
-			p{
-				font-family: $font-family;
-				font-weight: 400;
-			}			
-		}
+	// .inner{
+	// 	padding: 50px 0;
+	// 	&.left-align{
+	// 		text-align: left;
+	// 	}
+	// 	&.center{
+	// 		text-align: center;
+	// 	}
 
-		//tabs
-		header{
-			&.tab-header{
-				margin-bottom: 20px;
-				ul{
-					float: none;
-					border-bottom:none;
-					text-align: center;
-					li{
-						float: none;
-						@include inline-block;
-						margin-right: 40px;
-						border:none;
-						@media(max-width:767px){
-							margin-right: 20px;
-						}
-						@media(max-width:480px){
-							margin-right: 5px;
-						}
-						&:last-of-type{
-							margin-right: 0;
-						}
-						&.active{
-							a{
-								background: #0F95D2;
-								color:$white;
-								border: 1px solid #909295;
-							}
-						}
-						a{
-							border: 1px solid #909295;
-							@include font-size(28);
-							font-weight: 300;
-							@include inline-block;
-							color:#909295;
-							text-align: center;
-							padding:5px 10px;
-							@media(max-width:767px){
-							    @include font-size(22);
-							}
-							@media(max-width:480px){
-								@include font-size(15);
-							}
-							&:hover{
-								background: #0F95D2;
-								color:$white;
-								text-decoration: none;
-							}
-							
-
-							span{
-								display: block;
-								@include font-size(14);
-								font-weight: bold;
-								
-							}
-						}						
-					}
-				}	
-			}
-		}
-
-		//tab-content
-		section{
-			&.tab-content{
-				.tab-pane{
-					text-align: left;
-					header{
-						h2{
-							color:#6D6E71;
-							font-weight: 300;
-						}
-					}
-					.content{
-						h3{
-							color:#0F95D2;
-							font-weight: 300;
-							margin: 20px 0;
-						}
-						p{}
-					}
-				}
+	// 	article{
+	// 		//global article stuff
+	// 		h3{
+	// 			font-family: $font-family;
+	// 			font-weight: 300;
+	// 		}
+	// 		p{
+	// 			font-family: $font-family;
+	// 			font-weight: 400;
+	// 		}
+	// 		//contact page
+	// 		&.contact{
+	// 			h3{
+	// 				color: #0F95D2;
+	// 				font-weight: 300;
+	// 			}
+	// 			p{
+	// 				@include font-size(18);
+	// 				color: #808285;
+	// 				font-weight: 300;
+	// 			}
+	// 			ul.social{
+	// 				li{
+	// 					@include inline-block;
+	// 					margin:0 15px 0 0px;
+	// 				}
+	// 			}
 				
-			}
-		}
-	}
+	// 		}
+	// 	}
 
-	.hero{
-		background: image-url('faq/hero_bg.jpg') center center no-repeat;
-		@include background-size('cover');
-		text-align: center;
-		min-height:230px;
-		height:100%;
-		h1{
-			color:$white;
-			font-weight: 300;
-			line-height: 230px;
-			margin: 0;
-			vertical-align: middle;
-			@media(max-width:767px){
-			    @include font-size(34);
-			}
-			@media(max-width:480px){
-				@include font-size(22);
-			}
-		}
-	}
+	// 	//tabs
+	// 	header.tab-header{
+	// 		margin-bottom: 20px;
+	// 		ul{
+	// 			float: none;
+	// 			border-bottom:none;
+	// 			text-align: center;
+	// 			li{
+	// 				@include inline-block;
+	// 				margin-right: 40px;
+	// 				border:none;
+	// 				@media(max-width:767px){
+	// 					margin-right: 20px;
+	// 				}
+	// 				@media(max-width:480px){
+	// 					margin-right: 5px;
+	// 				}
+	// 				&:last-of-type{
+	// 					margin-right: 0;
+	// 				}
+	// 				&.active{
+	// 					a{
+	// 						background: #0F95D2;
+	// 						color:$white;
+	// 						border: 1px solid #909295;
+	// 					}
+	// 				}
+	// 				a{
+	// 					border: 1px solid #909295;
+	// 					@include font-size(28);
+	// 					font-weight: 300;
+	// 					@include inline-block;
+	// 					color:#909295;
+	// 					text-align: center;
+	// 					padding:5px 10px;
+	// 					@media(max-width:767px){
+	// 					    @include font-size(22);
+	// 					}
+	// 					@media(max-width:480px){
+	// 						@include font-size(15);
+	// 					}
+	// 					&:hover{
+	// 						background: #0F95D2;
+	// 						color:$white;
+	// 						text-decoration: none;
+	// 					}
+						
+
+	// 					span{
+	// 						display: block;
+	// 						@include font-size(14);
+	// 						font-weight: bold;
+							
+	// 					}
+	// 				}						
+	// 			}
+	// 		}	
+	// 	}
+
+	// 	//tab-content
+	// 	section{
+	// 		&.tab-content{
+	// 			.tab-pane{
+	// 				//faq page
+	// 				&.faq-content{
+	// 					text-align: left;
+	// 				}
+	// 				//about page
+	// 				&.about-content{
+	// 					header{
+	// 						text-align: center;		
+	// 					}
+	// 					text-align: left;
+	// 				}
+	// 				// global header stuff
+	// 				header{
+	// 					h2{
+	// 						color:#6D6E71;
+	// 						font-weight: 300;
+	// 					}
+	// 					h3{
+	// 						color:#0F95D2;
+	// 						font-weight: 300;
+	// 						margin: 20px 0;
+	// 					}
+	// 				}
+	// 				// global content
+	// 				.content{
+	// 					h3{
+	// 						color:#0F95D2;
+	// 						font-weight: 300;
+	// 						margin: 20px 0;
+	// 					}
+	// 				}
+	// 			}				
+	// 		}
+	// 	}
+	// }
+
+	// .hero{
+	// 	@include background-size('cover');
+	// 	text-align: center;
+	// 	min-height:230px;
+	// 	height:100%;
+	// 	&#faq{ background: image-url('faq/hero-bg.jpg') center center no-repeat; }
+	// 	&#about{ background: image-url('about/hero-bg.jpg') center center no-repeat; }
+	// 	&#contact{ background: image-url('contact/hero-bg.jpg') center center no-repeat; }
+	// 	h1{
+	// 		color:$white;
+	// 		font-weight: 300;
+	// 		padding: 60px 0 10px 0;
+	// 		margin: 0;
+	// 		vertical-align: middle;
+	// 		@include font-size(60);
+	// 		@media(max-width:767px){
+	// 		    @include font-size(34);
+	// 		}
+	// 	}
+	// 	p{
+	// 		color:$white;
+	// 		font-weight: 700;
+	// 	}
+	// }
 }

@@ -14,6 +14,7 @@
 
 @import "bootstrap";
 @import "compass";
+@import "compass/css3/border-radius";
 @import "bourbon";
 // @import "neat";
 @import "partials/variables";
@@ -22,7 +23,194 @@
 
 body{
     font-family: $font-family;
+    
+    // home controller
+    &.home{
+        #product-slider{
+            @include radial-gradient(circle at 50% 50%, #BC7CCC 0%, #8E2B7D 23.98%, #0B0204 50%);
+            min-height:700px;
+            height:100%;
+            width:100%;
+            .row{
+                margin-left: 0;
+                margin-right: 0;
+            }       
+        }
+
+        .inner{
+            padding: 50px 0;
+            &.left-align{
+                text-align: left;
+            }
+            &.center{
+                text-align: center;
+            }
+
+            article{
+                //global article stuff
+                h3{
+                    font-family: $font-family;
+                    font-weight: 300;
+                }
+                p{
+                    font-family: $font-family;
+                    font-weight: 400;
+                }
+                //contact page
+                &.contact{
+                    h3{
+                        color: #0F95D2;
+                        font-weight: 300;
+                    }
+                    p{
+                        @include font-size(18);
+                        color: #808285;
+                        font-weight: 300;
+                    }
+                    ul.social{
+                        li{
+                            @include inline-block;
+                            margin:0 15px 0 0px;
+                        }
+                    }
+                }
+            }
+
+            //tabs
+            header.tab-header{
+                margin-bottom: 20px;
+                ul{
+                    float: none;
+                    border-bottom:none;
+                    text-align: center;
+                    li{
+                        @include inline-block;
+                        margin-right: 40px;
+                        border:none;
+                        @media(max-width:767px){
+                            margin-right: 20px;
+                        }
+                        @media(max-width:480px){
+                            margin-right: 5px;
+                        }
+                        &:last-of-type{
+                            margin-right: 0;
+                        }
+                        &.active{
+                            a{
+                                background: #0F95D2;
+                                color:$white;
+                                border: 1px solid #909295;
+                            }
+                        }
+                        a{
+                            border: 1px solid #909295;
+                            @include font-size(28);
+                            font-weight: 300;
+                            @include inline-block;
+                            color:#909295;
+                            text-align: center;
+                            padding:5px 10px;
+                            @media(max-width:767px){
+                                @include font-size(22);
+                            }
+                            @media(max-width:480px){
+                                @include font-size(15);
+                            }
+                            &:hover{
+                                background: #0F95D2;
+                                color:$white;
+                                text-decoration: none;
+                            }
+                            
+
+                            span{
+                                display: block;
+                                @include font-size(14);
+                                font-weight: bold;
+                                
+                            }
+                        }                       
+                    }
+                }   
+            }
+
+            //tab-content
+            section{
+                &.tab-content{
+                    .tab-pane{
+                        //faq page
+                        &.faq-content{
+                            text-align: left;
+                        }
+                        //about page
+                        &.about-content{
+                            header{
+                                text-align: center;     
+                            }
+                            text-align: left;
+                        }
+                        // global header stuff
+                        header{
+                            h2{
+                                color:#6D6E71;
+                                font-weight: 300;
+                            }
+                            h3{
+                                color:#0F95D2;
+                                font-weight: 300;
+                                margin: 20px 0;
+                            }
+                        }
+                        // global content
+                        .content{
+                            h3{
+                                color:#0F95D2;
+                                font-weight: 300;
+                                margin: 20px 0;
+                            }
+                        }
+                    }               
+                }
+            }
+        }
+
+        .hero{
+            @include background-size('cover');
+            text-align: center;
+            min-height:228px;
+            height:100%;
+            &#faq{ background: image-url('faq/hero-bg.jpg') center center no-repeat; }
+            &#about{ background: image-url('about/hero-bg.jpg') center center no-repeat; }
+            &#contact{ background: image-url('contact/hero-bg.jpg') center center no-repeat; }
+            h1{
+                color:$white;
+                font-weight: 300;
+                padding: 60px 0 10px 0;
+                margin: 0;
+                vertical-align: middle;
+                @include font-size(60);
+                @media(max-width:767px){
+                    @include font-size(34);
+                }
+            }
+            p{
+                color:$white;
+                font-weight: 700;
+            }
+        }
+    }
+
+    // products controller
+    &.products{
+        
+    }
+    // events controller
+    &.events{
+        
+    }
 }
+
 h1,h2,h3,h4{
     font-family: $font-family;
 }
@@ -58,7 +246,6 @@ ul{
         }
     }
     &.login-links{
-        // @extend .pull-right;
         text-align: right;
         li{
             margin-right:10px;
@@ -74,6 +261,38 @@ ul{
             content: ' ';
         }
     }
+}
+
+form{
+    margin-top: 20px;
+    &.form-horizontal{
+        .form-group{
+            margin-bottom: 15px;
+            label{
+                color:#808285;
+                font-weight: 300;
+                @include font-size(16);
+                text-align: left;
+            }    
+            input{
+                height:45px;
+                @include border-radius(5px);
+                border: 1px solid #9C9C9C;
+                &[type=submit]{
+                    border:none;
+                }
+            }
+            select{
+                height:45px;
+                @include border-radius(5px);
+                border: 1px solid #9C9C9C;
+            }
+            textarea{
+                border: 1px solid #9C9C9C;   
+                @include border-radius(5px);
+            }        
+        }
+    }    
 }
 
 .carousel{
@@ -114,7 +333,7 @@ ul{
     }
 }
 
-header{
+header#site-header{
     .status-bar{
         background: #414042;
         width:100%;
@@ -193,16 +412,27 @@ footer{
     }
 
     ul{
+        li{
+            color:$white;
+            a{
+                color:$white;
+                font-weight: 300;
+            }
+        }
         &.login-links{
             margin-bottom: 20px;
         }
-        li{
-            color:$white;
-            &:first-of-type{
-                margin-bottom: 20px;
-            }
-            a{
-                color:$white;
+        &.site-nav{
+            li{
+                &:first-of-type{
+                    margin-bottom: 20px;
+                    a{
+                        font-weight: 700;
+                    }
+                }
+                a{
+                    font-weight: 300;
+                }
             }
         }
 
