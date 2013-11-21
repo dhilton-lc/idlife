@@ -375,15 +375,18 @@ header#site-header{
         ul{
             @extend .pull-right;
             line-height: 70px;
+            position: relative;
             li{
                 @include inline-block;
                 margin-right: 20px;
                 line-height: 25px;
+              
                 &:last-of-type{
                     margin-right: 0;
                 }
                 a{
                     color:#231F20;
+                    text-decoration: none;
                 }
 
                 &.active{
@@ -392,7 +395,15 @@ header#site-header{
                         
                     }
                 }
-
+                &#magic-line {
+                    position: absolute;
+                    bottom: 18px;
+                    left: 0;
+                    width: 100px;
+                    height: 5px;
+                    background: $white;
+                    margin-left: 0 !important;
+                }
             }
         }
     }    
@@ -432,7 +443,11 @@ footer{
                 }
                 a{
                     font-weight: 300;
+                    &:hover{
+                        color: $white;
+                    }
                 }
+                margin: 5px;
             }
         }
 

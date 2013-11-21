@@ -15,4 +15,8 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap
-//= require jquery.cycle2.min.js
+
+$(document).ready(function(){
+
+
+});
