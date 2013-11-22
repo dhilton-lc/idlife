@@ -3,8 +3,10 @@ class ProductsController < ApplicationController
   end
 
   def category
+  	@category = params[:category]
   end
 
   def show
+  	@product = params[:product]
   end
 end

@@ -48,14 +48,14 @@
       .col-md-2
         %ul.site-nav
           %li
-            %a{:href => '' }="The individuals"
+            =link_to "The individuals", :controller => "home", :action => "about"
           %li
-            %a{:href => '' }="Meet the Team"
+            =link_to "Meet the Team", :controller => "home", :action => "about"
 
       .col-md-2
         %ul.site-nav
           %li
-            %a{:href => '' }="Questions"
+            =link_to "Questions", :controller => "home", :action => "faq"
       
       .col-md-2
         %ul.site-nav

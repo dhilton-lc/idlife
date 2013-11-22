@@ -44,7 +44,12 @@ body{
             &.center{
                 text-align: center;
             }
-
+            ul.social{
+                li{
+                    @include inline-block;
+                    margin:0 15px 0 0px;
+                }
+            }
             article{
                 //global article stuff
                 h3{
@@ -65,13 +70,7 @@ body{
                         @include font-size(18);
                         color: #808285;
                         font-weight: 300;
-                    }
-                    ul.social{
-                        li{
-                            @include inline-block;
-                            margin:0 15px 0 0px;
-                        }
-                    }
+                    }                    
                 }
             }
 
@@ -171,13 +170,22 @@ body{
                                 border-bottom: 1px solid #808082;
                                 .cycle-slideshow{
                                     margin: 0 auto;
-                                    width:90%;    
+                                    width:90%;   
+                                    overflow-x:visible;
                                     .cycle-slide{
                                         @include inline-block;
                                         width: 158px;
                                         height: 158px;
                                         margin-right: 10px;
-                                        &.cycle-slide-active{ }
+                                        &.cycle-slide-active{
+                                            position: relative;
+                                            &:after{
+                                                content: ' ';
+                                                position: absolute;
+                                                bottom:-20px;
+                                                @include triangle(20px, blue, down);
+                                            }
+                                        }
                                     }
                                 }
                                 .slider-control{
@@ -196,6 +204,20 @@ body{
                                     }
                                 }
                             }
+
+                            &#culture{
+                                #social-container{
+                                    text-align: center;
+                                    margin-top: 20px;
+                                    h2{
+                                        
+                                    }
+                                    ul.social{
+                                        margin-top: 20px;
+                                    }
+                                }    
+                            }
+                            
                         }
                         //comp plan
                         &.comp-plan-content{
@@ -253,31 +275,7 @@ body{
             }
         }
 
-        .hero{
-            @include background-size('cover');
-            text-align: center;
-            min-height:228px;
-            height:100%;
-            &#faq{ background: image-url('faq/hero-bg.jpg') center center no-repeat; }
-            &#about{ background: image-url('about/hero-bg.jpg') center center no-repeat; }
-            &#contact{ background: image-url('contact/hero-bg.jpg') center center no-repeat; }
-            &#comp-plan{ background: image-url('comp-plan/hero-bg.jpg') center center no-repeat; }
-            h1{
-                color:$white;
-                font-weight: 300;
-                padding: 60px 0 10px 0;
-                margin: 0;
-                vertical-align: middle;
-                @include font-size(60);
-                @media(max-width:767px){
-                    @include font-size(34);
-                }
-            }
-            p{
-                color:$white;
-                font-weight: 700;
-            }
-        }
+        
     }
 
     // products controller
@@ -373,6 +371,31 @@ form{
             }        
         }
     }    
+}
+.hero{
+    @include background-size('cover');
+    text-align: center;
+    min-height:228px;
+    height:100%;
+    &#faq{ background: image-url('faq/hero-bg.jpg') center center no-repeat; }
+    &#about{ background: image-url('about/hero-bg.jpg') center center no-repeat; }
+    &#contact{ background: image-url('contact/hero-bg.jpg') center center no-repeat; }
+    &#comp-plan{ background: image-url('comp-plan/hero-bg.jpg') center center no-repeat; }
+    h1{
+        color:$white;
+        font-weight: 300;
+        padding: 60px 0 10px 0;
+        margin: 0;
+        vertical-align: middle;
+        @include font-size(60);
+        @media(max-width:767px){
+            @include font-size(34);
+        }
+    }
+    p{
+        color:$white;
+        font-weight: 700;
+    }
 }
 
 .carousel{

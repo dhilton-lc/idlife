@@ -17,8 +17,8 @@ IdlifeCom::Application.routes.draw do
 
   # FIXME: Resources
   get "products" => "products#index"
-  get "products/category"
-  get "products/show"
+  get "products/:category" => "products#category"
+  get "products/:product/show" => "products#show"
 
 
   # Example of regular route:

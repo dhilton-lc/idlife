@@ -31,9 +31,9 @@
       .row.content
         .col-md-12#slider-thumbs
           %span.prev-control.slider-control
-            =image_tag( 'about/prev-control.png')
+            =image_tag( 'about/prev-control.png', :class => 'img-responsive')
           %span.next-control.slider-control
-            =image_tag( 'about/next-control.png')
+            =image_tag( 'about/next-control.png', :class => 'img-responsive')
           .cycle-slideshow#thumbs{ :data => { "cycle-timeout" => 0, 
             "cycle-prev" => ".prev-control", 
             "cycle-next" => ".next-control",
@@ -82,7 +82,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.
       .row.content
         .col-md-4
-          =image_tag('about/placeholder.jpg')          
+          =image_tag('about/placeholder.jpg', :class => 'img-responsive')
         .col-md-8
           %h2="Lorem ipsum dolor sit amet"
           %h3="Lorem ipsum dolor sit ametorem ipsum dolor sit amet"
@@ -95,22 +95,34 @@
           %p
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.
         .col-md-4
-          =image_tag('about/placeholder.jpg')          
+          =image_tag('about/placeholder.jpg', :class => 'img-responsive')          
         
       
     %article.tab-pane.fade.about-content#culture
       %header.row
         .col-md-12
-          =image_tag( 'about/video-placeholder.jpg')
+          =image_tag( 'about/video-placeholder.jpg', :class => 'img-responsive')
           %h2="The IdLife Culture and Community"
           %h3="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
           %p
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.
       .row.content
         .col-md-4
-          =image_tag('about/placeholder.jpg')
+          =image_tag('about/placeholder.jpg', :class => 'img-responsive')
         .col-md-8
           %h2="Lorem ipsum dolor sit amet"
           %h3="Lorem ipsum dolor sit ametorem ipsum dolor sit amet"
           %p
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.
+      .row.content#social-container
+        .col-md-12
+          %h2="Join our Social Communities"
+          %ul.social
+            %li
+              %a{ :href=> '#' }=image_tag('fb-icon-lg.png', :class => 'img-responsive')
+            %li
+              %a{ :href=> '#' }=image_tag('twitter-icon-lg.png', :class => 'img-responsive')
+            %li
+              %a{ :href=> '#' }=image_tag('google-plus-icon-lg.png', :class => 'img-responsive')
+            %li
+              %a{ :href=> '#' }=image_tag('linkedin-icon-lg.png', :class => 'img-responsive')
