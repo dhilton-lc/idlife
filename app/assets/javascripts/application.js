@@ -19,14 +19,14 @@
 //= require bootstrap
 
 $(document).ready(function(){
+	//About page sliders
 	var slideshows = $('.cycle-slideshow').on('cycle-next cycle-prev', function(e, opts) {
 	    // advance the other slideshow
 	    slideshows.not(this).cycle('goto', opts.currSlide);
 	});
 
-	$('#thumbs .cycle-slide').click(function(){
+	$('#slider-thumbs .cycle-slide').click(function(){
 	    var index = $('#thumbs').data('cycle.API').getSlideIndex(this);
-	    console.log(index);
 	    slideshows.cycle('goto', index);
 	});
 
