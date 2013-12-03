@@ -15,7 +15,8 @@
 //= require turbolinks
 //= require jquery.cycle2
 //= require jquery.cycle2.carousel
-//= require_tree .
+//= require equalHeight
+//= require magicline
 //= require bootstrap
 
 $(document).ready(function(){
