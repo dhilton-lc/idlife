@@ -1,41 +1,43 @@
-%section#product-slider
-  .container
+%section
+  #product-slider
+    .container
+      .row
+        .col-md-12
+          #slider{ :class => 'carousel', :data => { :ride => 'carousel', :wrap => "true" } }
+            %ol.carousel-indicators
+              %li{ :class => 'active', :data => { :target => '#slider' } }
+              %li{ :data => { :target => '#slider' } }
+              %li{ :data => { :target => '#slider' } }
+            .carousel-inner
+              %article.item.active
+                %header
+                  %h1="Lorem ipsum dolor sit amet, finally."
+                  %a{ :href => ''} &gt; Check out the entire ID Shake family
+                =image_tag( 'home/slider/id-shake.png')
+            %a{ :href => '#slider', :class => 'left carousel-control', :data => { :slide => 'prev' } }
+              %span=image_tag( 'prev-control.png' )
+            %a{ :href => '#slider', :class => 'right carousel-control', :data => { :slide => 'next' } }
+              %span=image_tag( 'next-control.png' )
+%section
+  .container.inner.center
     .row
-      .col-md-12
-        #slider{ :class => 'carousel', :data => { :ride => 'carousel', :wrap => "true" } }
-          %ol.carousel-indicators
-            %li{ :class => 'active', :data => { :target => '#slider' } }
-            %li{ :data => { :target => '#slider' } }
-            %li{ :data => { :target => '#slider' } }
-          .carousel-inner
-            %article.item.active
-              %header
-                %h1="Lorem ipsum dolor sit amet, finally."
-                %a{ :href => ''}="> Check out the entire ID Shake family"
-              =image_tag( 'home/slider/id-shake.png')
-          %a{ :href => '#slider', :class => 'left carousel-control', :data => { :slide => 'prev' } }
-            %span=image_tag( 'prev-control.png' )
-          %a{ :href => '#slider', :class => 'right carousel-control', :data => { :slide => 'next' } }
-            %span=image_tag( 'next-control.png' )
-%section.container.inner.center
-  .row
-    %article.col-md-4
-      =image_tag( 'home/runner.jpg')
-      %h3="Lorem ipsum dolor sit amet"
-      %p
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.
-      %a{ :href => ''}="learn more"
+      %article.col-md-4
+        =image_tag( 'home/runner.jpg')
+        %h3 Lorem ipsum dolor sit amet
+        %p
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.
+        %a{ :href => ''}="learn more"
 
-    %article.col-md-4
-      =image_tag( 'home/products.jpg')
-      %h3="Lorem ipsum dolor sit amet"
-      %p
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.
-      %a{ :href => ''}="learn more"
+      %article.col-md-4
+        =image_tag( 'home/products.jpg')
+        %h3 Lorem ipsum dolor sit amet
+        %p
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.
+        %a{ :href => ''} learn more
 
-    %article.col-md-4
-      =image_tag( 'home/id-life-gauge.jpg')
-      %h3="Lorem ipsum dolor sit amet"
-      %p
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.  
-      %a{ :href => ''}="learn more"
+      %article.col-md-4
+        =image_tag( 'home/id-life-gauge.jpg')
+        %h3 Lorem ipsum dolor sit amet
+        %p
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.
+        %a{ :href => ''} learn more

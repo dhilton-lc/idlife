@@ -1,128 +1,119 @@
-%section.hero#about
-  .container
-    .row
-      .col-md-12
-        %h1="Get to know ID Life"
-        %p="Choose an option below"
-%section.container.inner
-  %header.row.tab-header
-    %ul
-      %li.active
-        %a{ :href => '#team-members', :data => { :toggle => "tab" } }
-          ="Meet"
-          %span="the team members"
-      %li
-        %a{ :href => '#learn', :data => { :toggle => "tab" } }
-          ="Learn"
-          %span="our philosophy"
-      %li
-        %a{ :href => '#culture', :data => { :toggle => "tab" } }
-          ="Culture"
-          %span="of ID Life"
-  
-  %section.tab-content
-    %article.tab-pane.fade.in.active.about-content#team-members
-      %header.row
+%section
+  .hero#about
+    .container
+      .row
         .col-md-12
-          %h2="Meet the ID Life Leadership Team"
-          %h3="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          %p
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.
-      .row.content
-        .col-md-12#slider-thumbs
-          %span.prev-control.slider-control
-            =image_tag( 'about/prev-control.png', :class => 'img-responsive')
-          %span.next-control.slider-control
-            =image_tag( 'about/next-control.png', :class => 'img-responsive')
-          .cycle-slideshow#thumbs{ :data => { "cycle-timeout" => 0, 
-            "cycle-prev" => ".prev-control", 
-            "cycle-next" => ".next-control",
-            "cycle-fx" => "carousel",
-            "cycle-carousel-fluid" => "true",
-            "cycle-loader" => "wait",
-            "cycle-slides" =>"> div",
-            "allow-wrap" => "false" } }
-            %div
-              =image_tag('about/thumb-placeholder.jpg', :class => 'img-responsive')
-            %div
-              =image_tag('about/thumb-placeholder.jpg', :class => 'img-responsive')
-      .row.content
-        .cycle-slideshow{ :data => { "cycle-timeout" => 0, "cycle-slides" => "> div", "cycle-fx" => "scrollHoriz"} }
-          .col-md-12
-            .col-md-4.slider-inner
-              =image_tag('about/team-member-placeholder.jpg', :class => 'img-responsive')
-              %br
-              =image_tag('about/video-placeholder.jpg', :class => 'img-responsive');
-            .col-md-8.slider-inner
-              %h2="Logan Stout"
-              %h3="CEO and Founder"
-              %p
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.
-              %p
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.
-          .col-md-12
-            .col-md-4.slider-inner
-              =image_tag('about/team-member-placeholder.jpg', :class => 'img-responsive')
-              %br
-              =image_tag('about/video-placeholder.jpg', :class => 'img-responsive');
-            .col-md-8.slider-inner
-              %h2="Some Other Dude"
-              %h3="CEO and Founder"
-              %p
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.
-              %p
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.
+          %h1="Get to know ID Life"
+          %p="Choose an option below"
+%section
+  .container.inner
+    %header.row.tab-header
+      %ul
+        %li.active
+          %a{ :href => '#team-members', :data => { :toggle => "tab" } }
+            ="Meet"
+            %span="the team members"
+        %li
+          %a{ :href => '#learn', :data => { :toggle => "tab" } }
+            ="Learn"
+            %span="our philosophy"
+        %li
+          %a{ :href => '#culture', :data => { :toggle => "tab" } }
+            ="Culture"
+            %span="of ID Life"
 
-    %article.tab-pane.fade.about-content#learn
-      %header.row
-        .col-md-12
-          %h2="Learn about the IDLife Philosophy"
-          %h3="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          %p
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.
-      .row.content
-        .col-md-4
-          =image_tag('about/placeholder.jpg', :class => 'img-responsive')
-        .col-md-8
-          %h2="Lorem ipsum dolor sit amet"
-          %h3="Lorem ipsum dolor sit ametorem ipsum dolor sit amet"
-          %p
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.
-      .row.content
-        .col-md-8
-          %h2="Lorem ipsum dolor sit amet"
-          %h3="Lorem ipsum dolor sit ametorem ipsum dolor sit amet"
-          %p
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.
-        .col-md-4
-          =image_tag('about/placeholder.jpg', :class => 'img-responsive')          
-        
-      
-    %article.tab-pane.fade.about-content#culture
-      %header.row
-        .col-md-12
-          =image_tag( 'about/video-placeholder.jpg', :class => 'img-responsive')
-          %h2="The IdLife Culture and Community"
-          %h3="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          %p
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.
-      .row.content
-        .col-md-4
-          =image_tag('about/placeholder.jpg', :class => 'img-responsive')
-        .col-md-8
-          %h2="Lorem ipsum dolor sit amet"
-          %h3="Lorem ipsum dolor sit ametorem ipsum dolor sit amet"
-          %p
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Mauris sollicitudin eu erat eu bibendum. Etiam augue quam, tempus non turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo urna purus, eu posuere erat ultrices a. Mauris sollicitudin eu erat eu.
-      .row.content#social-container
-        .col-md-12
-          %h2="Join our Social Communities"
-          %ul.social
-            %li
-              %a{ :href=> '#' }=image_tag('fb-icon-lg.png', :class => 'img-responsive')
-            %li
-              %a{ :href=> '#' }=image_tag('twitter-icon-lg.png', :class => 'img-responsive')
-            %li
-              %a{ :href=> '#' }=image_tag('google-plus-icon-lg.png', :class => 'img-responsive')
-            %li
-              %a{ :href=> '#' }=image_tag('linkedin-icon-lg.png', :class => 'img-responsive')
+    %section.tab-content
+      %article.tab-pane.fade.in.active.about-content#team-members
+        %header.row
+          .col-md-12
+            %h2="Meet the ID Life Leadership Team"
+            %h3="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            = render 'short_lorem'
+        .row.content
+          .col-md-12#slider-thumbs
+            %span.prev-control.slider-control
+              =image_tag( 'about/prev-control.png', :class => 'img-responsive')
+            %span.next-control.slider-control
+              =image_tag( 'about/next-control.png', :class => 'img-responsive')
+            .cycle-slideshow#thumbs{ :data => { "cycle-timeout" => 0,
+              "cycle-prev" => ".prev-control",
+              "cycle-next" => ".next-control",
+              "cycle-fx" => "carousel",
+              "cycle-carousel-fluid" => "true",
+              "cycle-loader" => "wait",
+              "cycle-slides" =>"> div",
+              "allow-wrap" => "false" } }
+              %div
+                =image_tag('about/thumb-placeholder.jpg', :class => 'img-responsive')
+              %div
+                =image_tag('about/thumb-placeholder.jpg', :class => 'img-responsive')
+        .row.content
+          .cycle-slideshow{ :data => { "cycle-timeout" => 0, "cycle-slides" => "> div", "cycle-fx" => "scrollHoriz"} }
+            .col-md-12
+              .col-md-4.slider-inner
+                =image_tag('about/team-member-placeholder.jpg', :class => 'img-responsive')
+                %br
+                =image_tag('about/video-placeholder.jpg', :class => 'img-responsive');
+              .col-md-8.slider-inner
+                %h2="Logan Stout"
+                %h3="CEO and Founder"
+                = render 'lorem'
+                = render 'lorem'
+            .col-md-12
+              .col-md-4.slider-inner
+                =image_tag('about/team-member-placeholder.jpg', :class => 'img-responsive')
+                %br
+                =image_tag('about/video-placeholder.jpg', :class => 'img-responsive');
+              .col-md-8.slider-inner
+                %h2="Some Other Dude"
+                %h3="CEO and Founder"
+                = render 'lorem'
+                = render 'lorem'
+
+      %article.tab-pane.fade.about-content#learn
+        %header.row
+          .col-md-12
+            %h2="Learn about the IDLife Philosophy"
+            %h3="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            = render 'short_lorem'
+        .row.content
+          .col-md-4
+            =image_tag('about/placeholder.jpg', :class => 'img-responsive')
+          .col-md-8
+            %h2="Lorem ipsum dolor sit amet"
+            %h3="Lorem ipsum dolor sit ametorem ipsum dolor sit amet"
+            = render 'lorem'
+        .row.content
+          .col-md-8
+            %h2="Lorem ipsum dolor sit amet"
+            %h3="Lorem ipsum dolor sit ametorem ipsum dolor sit amet"
+            = render 'lorem'
+          .col-md-4
+            =image_tag('about/placeholder.jpg', :class => 'img-responsive')
+
+      %article.tab-pane.fade.about-content#culture
+        %header.row
+          .col-md-12
+            =image_tag( 'about/video-placeholder.jpg', :class => 'img-responsive')
+            %h2="The IdLife Culture and Community"
+            %h3="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            = render 'short_lorem'
+        .row.content
+          .col-md-4
+            =image_tag('about/placeholder.jpg', :class => 'img-responsive')
+          .col-md-8
+            %h2="Lorem ipsum dolor sit amet"
+            %h3="Lorem ipsum dolor sit ametorem ipsum dolor sit amet"
+            = render 'lorem'
+        .row.content#social-container
+          .col-md-12
+            %h2="Join our Social Communities"
+            %ul.social
+              %li
+                %a{ :href=> '#' }=image_tag('fb-icon-lg.png', :class => 'img-responsive')
+              %li
+                %a{ :href=> '#' }=image_tag('twitter-icon-lg.png', :class => 'img-responsive')
+              %li
+                %a{ :href=> '#' }=image_tag('google-plus-icon-lg.png', :class => 'img-responsive')
+              %li
+                %a{ :href=> '#' }=image_tag('linkedin-icon-lg.png', :class => 'img-responsive')
